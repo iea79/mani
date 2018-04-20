@@ -1,0 +1,171 @@
+// Input text and textarea ================================================
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=number],
+input[type=datetime], 
+textarea {
+	background-color: $input_bg_color;
+	border: 1px solid $input_border_color;
+	padding: 6px 15px;
+	outline: none;
+	font-size: 16px;
+	font-weight: 300;
+	font-family: $main_font_family;
+	border-radius: 5px;
+	@include trs(0.3s);
+	&:hover {
+		border: 1px solid $input_hover_border_color;
+		background-color: $input_hover_bg_color;;
+	}
+	&:focus {
+		border: 1px solid $input_focus_border_color;
+		background-color: $input_focus_bg_color;;
+	}
+	&.input_error {
+		background-color: #fff0f0;
+		border: 1px solid red;
+	}
+	// Placeholder for input +++++++++++++++
+	@include placeholder {
+		color: $input_placeholder_color;
+	}
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+// Input checkbox and radio ===============================================
+input[type=checkbox],
+input[type=radio] {
+	padding: 0;
+}
+
+input[type=checkbox]:not(:disabled),
+input[type=radio]:not(:disabled) {
+    cursor: pointer;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border: 1px solid #aaa;
+    overflow: hidden;
+    margin-top: -4px;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    outline: 0;
+    background: 0 0;
+    text-align: center;
+    position: relative;
+}
+
+input[type=radio] {
+    border-radius: 50%;
+}
+
+input[type=checkbox]:before,
+input[type=radio]:before {
+    display: block;
+}
+
+input[type=radio]:checked:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -3px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: #000;
+}
+
+input[type=checkbox]:checked:before,
+input[type=checkbox]:indeterminate:before {
+    content: "\2714";
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    line-height: 13px;
+    color: #000;
+}
+
+input[type=checkbox]:indeterminate:before {
+    content: "\f068";
+}
+
+input[type=checkbox]:disabled,
+input[type=radio]:disabled {
+    border-color: #ddd;
+}
+
+input[type=radio]:disabled:checked:before {
+    background-color: #aaa;
+}
+
+input[type=checkbox]:disabled:checked:before,
+input[type=checkbox]:disabled:indeterminate:before {
+    color: #aaa;
+}
+
+
+// Style for button and pseudo button for input and link
+.btn {
+	color: $btn_default_text_color;
+	font-family: $main_font_family;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 5px 15px 7px;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	display: inline-block;
+	background-color: $btn_default_bg_color;
+	text-align: center;
+	max-width: 100%;
+	cursor: pointer;
+	border-radius: 5px;
+	@include trs(0.3s);
+	@include trs(0.3);
+	text-decoration: none;
+	&:hover {
+		background-color: #fff;
+		color: #000;
+		text-decoration: none;
+	}
+	&:focus,&:active {
+		background-color: transparentize(#fff, .2);
+		color: #000;
+	}
+	@each $status_el, $color_bg in $el_colors {
+		&__#{$status_el} {
+			background-color: $color_bg;
+			border-color: $color_bg;
+			color: $btn_contrast_text_color;
+			&:hover {
+				background-color: darken($color_bg, 7%);
+				color: $btn_contrast_text_color;
+			}
+			&:focus,&:active {
+				background-color: darken($color_bg, 10%);
+				color: $btn_contrast_text_color;
+			}
+		}
+	}	
+}

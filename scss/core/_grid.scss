@@ -1,0 +1,100 @@
+// Grid
+// ------------------------
+// Example - for html
+// <div class="grid grid__3 ">
+//  	<div>
+// 			...
+//  	</div>
+//  	<div>
+// 			...
+//  	</div>
+//  	<div>
+// 			...
+//  	</div>
+// </div>
+// ------------------------
+.grid {
+	margin-left: -$grid_padding;
+	box-sizing: content-box;
+	@include flex();
+	@include flex-flow(row wrap);
+	@extend %clear_all;
+	&-nowrap {
+		@include flex-flow(row nowrap);
+	}
+	>div {
+		padding-left: $grid_padding;
+		margin-bottom: $grid_padding;
+		&.width {
+			&_1 {
+				width: 50%;
+			}
+			&_2 {
+				width: 50%;
+			}
+			&_3 {
+				width: 33.3%;
+			}
+			&_4 {
+				width: 25%;
+			}
+			&_5 {
+				width: 20%;
+			}
+			&_2_3 {
+				width: 66%;
+			}
+			&_3_4 {
+				width: 75%;
+			}
+		}
+	}
+	&__item {
+		// border: 1px solid #000;
+		&.active {
+			// border: 3px solid #ddd;
+		}
+	}
+	&__1 {
+		>div {		
+			width: 100%;
+		}
+	}
+	&__2 {
+		>div {		
+			width: 50%;
+		}
+	}
+	&__3 {
+		>div {
+			width: 33.3%;
+		}
+	}
+	&__4 {
+		>div {		
+			width: 25%;
+		}
+	}
+	&__5 {
+		>div {		
+			width: 20%;
+		}
+	}
+}
+
+
+[data-grid-match] {
+	.grid__item {
+		background-color: #eee;
+	}
+}
+
+@media (max-width: 991px) {
+	.grid {
+		&__4 {
+			>div {
+				width: 50%;
+			}
+		}
+	}
+}
