@@ -1,4 +1,4 @@
-@-webkit-keyframes rot {}/*
+/*
 //  ==========================
 //  Evgeniy Ivanov
 //  Email: busforward@gmail.com
@@ -1463,6 +1463,14 @@ input[type=checkbox]:disabled:indeterminate:before {
         left: 50%;
         margin-left: -280px; } }
 
+@-webkit-keyframes rot {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 @keyframes rot {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1630,7 +1638,7 @@ input[type=checkbox]:disabled:indeterminate:before {
       font-size: 57%;
       position: relative; }
       .qr__left {
-        padding-top: 76em;
+        padding-top: 207%;
         width: 100%; }
       .qr__right {
         position: absolute;
@@ -1912,7 +1920,7 @@ input[type=checkbox]:disabled:indeterminate:before {
     width: 19.13em; }
   @media (max-width: 767px) {
     .saving {
-      padding: 2.7em 0 0.7em; }
+      padding: 20px 0 10px; }
       .saving__tabs {
         margin-bottom: 12px; }
       .saving__tab a {
@@ -1985,7 +1993,7 @@ input[type=checkbox]:disabled:indeterminate:before {
       margin: 3.4em 0; }
   @media (max-width: 767px) {
     .connect {
-      padding: 2.1em 0 74%;
+      padding: 20px 0 74%;
       position: relative;
       background-size: 91%;
       background-position: bottom left -10px; }
@@ -2007,7 +2015,9 @@ input[type=checkbox]:disabled:indeterminate:before {
         right: -28px;
         left: auto;
         bottom: 45px;
-        width: 49%;
+        max-width: 49%;
+        width: auto;
+        max-height: 500px;
         position: absolute; } }
 
 .service {
@@ -2140,11 +2150,16 @@ input[type=checkbox]:disabled:indeterminate:before {
           margin-right: 0; }
         .service__tab a {
           font-size: 10px;
-          padding: 5px 10px;
-          border: 1px solid rgba(137, 67, 202, 0.1); }
+          padding: 5px 10px 5px 37px;
+          border: 1px solid rgba(137, 67, 202, 0.1);
+          position: relative; }
         .service__tab i {
           font-size: 12px;
-          padding-top: 6px; }
+          padding-top: 0;
+          position: absolute;
+          margin-top: -6px;
+          left: 7px;
+          top: 50%; }
         .service__tab.active a:before {
           right: 5px; }
       .service__right {
