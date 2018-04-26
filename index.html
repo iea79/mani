@@ -594,7 +594,7 @@
 					<div class="calback__photo animateUp">
 						<img src="img/review-photo.png">
 					</div>
-					<form action="" class="calback__form form" data-animate-x="0.1">
+					<form action="send.php" class="calback__form form" data-animate-x="0.1">
 						<div class="calback__legend">Оставьте телефон</div>
 						<p>наш менеджер перезвонит вам в течение 10 минут, чтобы проконсультировать, обсудить перспективы для вашего бизнеса и ответить на все вопросы</p>
 						<div class="calback__row">
@@ -603,7 +603,7 @@
 								<i class="icon-phone"></i>
 							</div>
 							<div>
-								<button class="btn btn__success">Обсудить свои задачи с менеджером</button>
+								<button type="submit" class="btn btn__success">Обсудить свои задачи с менеджером</button>
 							</div>
 						</div>
 					</form>
@@ -843,17 +843,17 @@
 				<div class="modal__title">Заполните форму</div>
 				<div class="modal__sub">чтобы получить инструкции по установке <br>и бесплатную консультацию</div>
 				<div class="modal__info">Наш менеджер перезвонит вам <br>в течение 10 минут</div>
-				<form action="" class="modal__form form">
+				<form action="send.php" class="modal__form form">
 					<div class="form__row form__icon">
-						<input required type="text" class="form__field" placeholder="Ваше имя">
+						<input required type="text" name="name" class="form__field" placeholder="Ваше имя">
 						<i class="icon-user"></i>
 					</div>
 					<div class="form__row form__icon">
-						<input required type="text" class="form__field" placeholder="Введите ваш email">
+						<input required type="text" name="email" class="form__field" placeholder="Введите ваш email">
 						<i class="icon-mail"></i>
 					</div>
 					<div class="form__row form__icon">
-						<input required type="tel" class="form__field" placeholder="+7 (___) ___-__-__">
+						<input required type="tel" name="tel" class="form__field" placeholder="+7 (___) ___-__-__">
 						<i class="icon-phone"></i>
 					</div>
 					<div class="form__row">
@@ -882,13 +882,13 @@
 					<div>
 						<div class="modal__title">Заполните форму</div>
 						<div class="modal__sub">Наш менеджер перезвонит вам <br>в течение 10 минут</div>
-						<form action="" class="modal__form form">
+						<form action="send.php" class="modal__form form">
 							<div class="form__row form__icon">
-								<input required type="text" class="form__field" placeholder="Ваше имя">
+								<input required type="text" name="name" class="form__field" placeholder="Ваше имя">
 								<i class="icon-user"></i>
 							</div>
 							<div class="form__row form__icon">
-								<input required type="tel" class="form__field" placeholder="+7 (___) ___-__-__">
+								<input required type="tel" name="tel" class="form__field" placeholder="+7 (___) ___-__-__">
 								<i class="icon-phone"></i>
 							</div>
 							<div class="form__row">
@@ -908,6 +908,20 @@
 	</div>
 </div>
 <!-- end Modal modalLg -->
+
+<!-- begin Modal success -->
+<div class="modal fade success" id="success">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="modal-body">
+				<div class="modal__title">Ваше сообщение успешно отправлено</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal success -->
+
 
 
 

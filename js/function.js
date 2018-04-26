@@ -34,43 +34,10 @@ $(document).ready(function() {
 		document.documentElement.setAttribute('data-browser', 'not-flex');
 	}
 
-	// First screen full height
-	function setHeiHeight() {
-	    $('.full__height').css({
-	        minHeight: $(window).height() + 'px'
-	    });
-	}
-	setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-	$(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
-
-
 	// Reset link whte attribute href="#"
 	$('[href*="#"]').click(function(event) {
 		event.preventDefault();
 	});
-
-	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#main__menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 	$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 	}
-	// 	return false;
-	// });
-
-	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    // $(document).ready(function(){
-    //     var HeaderTop = $('#header').offset().top;
-        
-    //     $(window).scroll(function(){
-    //             if( $(window).scrollTop() > HeaderTop ) {
-    //                     $('#header').addClass('stiky');
-    //             } else {
-    //                     $('#header').removeClass('stiky');
-    //             }
-    //     });
-    // });
-   	// setGridMatch($('[data-grid-match] .grid__item'));
 
    	gridMatch();
    	fontResize();
@@ -92,9 +59,12 @@ $(document).ready(function() {
     $("button[type=submit]").on('click', function (e){ 
 	    e.preventDefault();
     	var form = $(this).closest('.form');
+    	var modalId = $(this).closest('.modal').attr('id');
     	var url = form.attr('action');
         var form_data = form.serialize();
         var field = form.find('[required]');
+
+        var check = form.find('[type=checkbox]');
 
         empty = 0;
 
@@ -106,6 +76,12 @@ $(document).ready(function() {
 	        }  	
         });
 
+        if (check) {
+        	if (check.prop('checked') == false) {
+        		return false;
+        	}
+        }
+
         if (empty > 0) {
         	return false;
         } else {    	
@@ -115,6 +91,7 @@ $(document).ready(function() {
 	            dataType: "html",
 	            data: form_data,
 	            success: function (response) {
+	            	$('#'+modalId).modal('hide');
 	            	$('#success').modal('show');
 	            }
 	        });
@@ -149,11 +126,8 @@ $(window).resize(function(event) {
 });
 
 function checkOnResize() {
-   	// setGridMatch($('[data-grid-match] .grid__item'));
    	gridMatch();
    	fontResize();
-   	// parallaxMove();
-   	// slider3dInit();
 }
 
 function gridMatch() {
@@ -161,20 +135,6 @@ function gridMatch() {
    		byRow: true,
    	});
 }
-
-// function setGridMatch(columns) {
-// 	var tallestcolumn = 0;
-// 	columns.removeAttr('style');
-// 	columns.each( function() {
-// 		currentHeight = $(this).height();
-// 		if(currentHeight > tallestcolumn) {
-// 			tallestcolumn = currentHeight;
-// 		}
-// 	});
-// 	setTimeout(function() {
-// 		columns.css('minHeight', tallestcolumn);
-// 	}, 100);
-// }
 
 function fontResize() {
     var windowWidth = $(window).width();
@@ -189,12 +149,7 @@ function fontResize() {
     	var fontSize = 100;
     	var slideerWidth = 360;
     }
-    console.log(slideerWidth);
 	$('body').css('fontSize', fontSize + '%');
-	// $('.carousel-3d-slider').width(slideerWidth).height(slideerHeight);
-	// $('.carousel-3d-slide').each(function() {
-	// 	$(this).width(slideerWidth)//.height(slideerHeight);
-	// });
 }
 
 function slider3dInit() {
@@ -285,7 +240,6 @@ $(function () {
                 })
 
                 // Заменяем миниатюру HTML5 плеером с YouTube
-                // $(this).hide();
                 $(this).closest('.video__wrap').append(iframe);
 
             });
@@ -294,7 +248,6 @@ $(function () {
 
     $('.reviwe__tab a').on('click', function() {
         $('.reviwe__panes iframe').remove();
-        // $('.youtube').show();
     });
 });
 
