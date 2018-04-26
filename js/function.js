@@ -71,8 +71,73 @@ $(document).ready(function() {
     //     });
     // });
    	// setGridMatch($('[data-grid-match] .grid__item'));
+
    	gridMatch();
+   	fontResize();
+   	slider3dInit();
+   	parallaxMove();
+   	animateUp();
+
+   	$('.saving__tab').on('click', function() {
+   		$('.animateUp').addClass('visible animated slideInUp');
+   	});
+
+   	$('.service__tab').on('click', function() {
+   		$('.animateRight').addClass('visible animated slideInRight');
+   		$('.service__pane .animateUp').addClass('visible animated slideInUp');
+   	});
+
+   	$('[type=tel]').inputmask("+7(999)99-99-999",{ showMaskOnHover: false });
+
+    $("button[type=submit]").on('click', function (e){ 
+	    e.preventDefault();
+    	var form = $(this).closest('.form');
+    	var url = form.attr('action');
+        var form_data = form.serialize();
+        var field = form.find('[required]');
+
+        empty = 0;
+
+        field.each(function() {
+	        if ($(this).val() == "") {
+	        	$(this).addClass('invalid');
+	        	// return false;
+	        	empty++;
+	        }  	
+        });
+
+        if (empty > 0) {
+        	return false;
+        } else {    	
+	        $.ajax({
+	            url: url,
+	            type: "POST",
+	            dataType: "html",
+	            data: form_data,
+	            success: function (response) {
+	            	$('#success').modal('show');
+	            }
+	        });
+        }
+
+    });
+
 });
+
+function animateUp() {
+	$('.animateUp').addClass("hidden").viewportChecker({
+		classToAdd: 'visible animated slideInUp',
+		offset: 100
+	});
+	$('.animateRight').addClass("hidden").viewportChecker({
+		classToAdd: 'visible animated slideInRight',
+		offset: 100
+	});
+	$('.animateLeft').addClass("hidden").viewportChecker({
+		classToAdd: 'visible animated slideInLeft',
+		offset: 100
+	});
+}
 
 $(window).resize(function(event) {
     var windowWidth = $(window).width();
@@ -86,6 +151,9 @@ $(window).resize(function(event) {
 function checkOnResize() {
    	// setGridMatch($('[data-grid-match] .grid__item'));
    	gridMatch();
+   	fontResize();
+   	// parallaxMove();
+   	// slider3dInit();
 }
 
 function gridMatch() {
@@ -107,4 +175,126 @@ function gridMatch() {
 // 		columns.css('minHeight', tallestcolumn);
 // 	}, 100);
 // }
+
+function fontResize() {
+    var windowWidth = $(window).width();
+    if (windowWidth < 1770 && windowWidth >= 768) {
+    	var fontSize = windowWidth/17.69;
+    	var slideerWidth = windowWidth*0.2067;
+    	var slideerHeight = windowWidth*0.4653;
+    } else if (windowWidth < 768) {
+    	var fontSize = 80;
+    	var slideerWidth = windowWidth*0.3;
+    } else if (windowWidth >= 1770) {
+    	var fontSize = 100;
+    	var slideerWidth = 360;
+    }
+    console.log(slideerWidth);
+	$('body').css('fontSize', fontSize + '%');
+	// $('.carousel-3d-slider').width(slideerWidth).height(slideerHeight);
+	// $('.carousel-3d-slide').each(function() {
+	// 	$(this).width(slideerWidth)//.height(slideerHeight);
+	// });
+}
+
+function slider3dInit() {
+	new Vue({
+		el: '#firstScreen__slider',
+		data: {
+			slides: 10
+		},
+		components: {
+			'carousel-3d': Carousel3d.Carousel3d,
+			'slide': Carousel3d.Slide
+		}
+	});
+}
+
+
+// TweenMax.min.js
+// data-animate-wrapp - обертка с плавающими блоками
+// data-animate-x - блок движется по оси Х
+// data-animate-xy - блок движется по обеим осям
+function parallaxMove() {
+	
+	$('[data-animate-wrapp]').each(function() {	
+		var container = $(this),
+			elX = container.find('[data-animate-x]'),
+			elXY = container.find('[data-animate-xy]');
+
+			var offset = $(this).offset();
+
+		$(this).on('mousemove', function(e) {
+
+
+			var sxPos = e.pageX / container.width() * 100 - 100;
+			var syPos = (e.pageY - offset.top) / container.height() * 100 - 100;
+
+			elX.each(function() {
+				TweenMax.set([elX], { transformStyle: "preserve-3d" });
+				xSpeed = elX.attr('data-animate-x');
+				TweenMax.to($(this), 2, {
+					rotationY: xSpeed * sxPos,
+					rotationX: 0 * syPos,
+					transformPerspective: 500,
+					transformOrigin: "center center -400",
+					ease: Expo.easeOut,
+					// overwrite: 'all' 
+				});
+			});
+
+			elXY.each(function() {
+				xySpeed = $(this).attr('data-animate-xy');
+				smooth = $(this).attr('data-smooth');
+				TweenMax.to($(this), smooth, {
+					transformPerspective: 500,
+				    css: { 
+				    	transform: 
+				      		'translateX('+ (e.pageX / container.width() * xySpeed - xySpeed) + 'em) translateY(' +  ((e.pageY - offset.top) / container.height() * xySpeed - xySpeed) + 'em)' 
+				    }, 
+				    ease:Expo.easeOut, 
+				    // overwrite: 'all' 
+				});
+			});
+
+		});
+	});
+}
+
+// Видео для страницы how it works
+$(function () {
+    if ($(".youtube")) {
+        $(".youtube").each(function () {
+            // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
+            $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+
+            // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+            $(this).append($('<img src="img/play.png" alt="Play" class="video__play">'));
+
+            $(document).delegate('#' + this.id, 'click', function () {
+                // создаем iframe со включенной опцией autoplay
+                var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+                if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
+
+                // Высота и ширина iframe должны быть такими же, как и у родительского блока
+                var iframe = $('<iframe/>', {
+                    'frameborder': '0',
+                    'src': iframe_url,
+                    'width': $(this).width(),
+                    'height': $(this).height()
+                })
+
+                // Заменяем миниатюру HTML5 плеером с YouTube
+                // $(this).hide();
+                $(this).closest('.video__wrap').append(iframe);
+
+            });
+        });
+    }
+
+    $('.reviwe__tab a').on('click', function() {
+        $('.reviwe__panes iframe').remove();
+        // $('.youtube').show();
+    });
+});
 

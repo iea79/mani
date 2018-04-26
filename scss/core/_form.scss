@@ -11,24 +11,23 @@ input[type=datetime],
 textarea {
 	background-color: $input_bg_color;
 	border: 1px solid $input_border_color;
-	padding: 6px 15px;
+	padding: 1.9em 2em;
 	outline: none;
-	font-size: 16px;
-	font-weight: 300;
+	font-size: 0.95em;
+	font-weight: 400;
 	font-family: $main_font_family;
-	border-radius: 5px;
-	@include trs(0.3s);
+	border-radius: 0.1em;
+	transition: all .3s;
 	&:hover {
-		border: 1px solid $input_hover_border_color;
-		background-color: $input_hover_bg_color;;
+		// border: 1px solid $input_hover_border_color;
+		// background-color: $input_hover_bg_color;;
 	}
 	&:focus {
 		border: 1px solid $input_focus_border_color;
 		background-color: $input_focus_bg_color;;
 	}
-	&.input_error {
-		background-color: #fff0f0;
-		border: 1px solid red;
+	&.invalid {
+		border: 1px solid $input_error_border_color;
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
@@ -60,17 +59,19 @@ input[type=radio]:not(:disabled) {
 input[type=checkbox],
 input[type=radio] {
     display: inline-block;
-    height: 14px;
-    width: 14px;
-    border: 1px solid #aaa;
+    height: 1.2em;
+    width: 1.2em;
+    border: 1px solid $color_success;
     overflow: hidden;
-    margin-top: -4px;
-    vertical-align: middle;
+    vertical-align: top;
     -webkit-appearance: none;
     outline: 0;
     background: 0 0;
+    background-color: $color_success;
     text-align: center;
     position: relative;
+    border-radius: 0.2em;
+    font-size: $main_font_size;
 }
 
 input[type=radio] {
@@ -93,17 +94,20 @@ input[type=radio]:checked:before {
     display: block;
     position: absolute;
     border-radius: 50%;
-    background: #000;
+    background: $color_success;
 }
 
 input[type=checkbox]:checked:before,
 input[type=checkbox]:indeterminate:before {
-    content: "\2714";
-    font-size: 12px;
+    content: "";
     -webkit-font-smoothing: antialiased;
-    text-align: center;
-    line-height: 13px;
-    color: #000;
+    background-color: $color_success;
+    background-image: url(../img/check.svg);
+    background-repeat: no-repeat;
+    background-position: top 0.15em center;
+    background-size: 80%;
+    width: 100%;
+    height: 100%;
 }
 
 input[type=checkbox]:indeterminate:before {
@@ -129,9 +133,9 @@ input[type=checkbox]:disabled:indeterminate:before {
 .btn {
 	color: $btn_default_text_color;
 	font-family: $main_font_family;
-	font-size: 16px;
-	font-weight: 300;
-	padding: 5px 15px 7px;
+	font-size: 0.95em;
+	font-weight: 500;
+	padding: 1.5em 2em 1.6em ;
 	border: none;
 	outline: none;
 	text-decoration: none;
@@ -140,7 +144,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 5px;
+	border-radius: 4em;
 	@include trs(0.3s);
 	@include trs(0.3);
 	text-decoration: none;
@@ -148,10 +152,12 @@ input[type=checkbox]:disabled:indeterminate:before {
 		background-color: #fff;
 		color: #000;
 		text-decoration: none;
+		box-shadow: 0 0.529em 1.059em rgba(113, 179, 73, 0.75);
 	}
-	&:focus,&:active {
+	&:active {
 		background-color: transparentize(#fff, .2);
 		color: #000;
+		box-shadow: none;
 	}
 	@each $status_el, $color_bg in $el_colors {
 		&__#{$status_el} {
@@ -159,11 +165,11 @@ input[type=checkbox]:disabled:indeterminate:before {
 			border-color: $color_bg;
 			color: $btn_contrast_text_color;
 			&:hover {
-				background-color: darken($color_bg, 7%);
+				background-color: $color_bg;
 				color: $btn_contrast_text_color;
 			}
-			&:focus,&:active {
-				background-color: darken($color_bg, 10%);
+			&:active {
+				background-color: darken($color_bg, 7%);
 				color: $btn_contrast_text_color;
 			}
 		}

@@ -7,11 +7,9 @@
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/animate.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css?0.5" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery.matchHeight.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
 
 </head>
 
@@ -19,169 +17,755 @@
 
 <div class="wrapper">
 	
-	<!-- begin header -->
-	<header class="header">
-		<div class="container_center">
-
-			<a href="/" class="header__logo"><img src="img/logo.png" alt=""></a>
-					
-		</div>
-	</header>
-	<!-- end header-->
-	
 	<!-- begin main__content -->
 	<main class="main__content">
-	
-		<div class="container_center">
 
-			<!-- begin breadcrumb -->
-			<ul class="breadcrumb">
-			
-				<li>
-					<a href="#">Page</a>
-				</li>
-				<li>
-					<a href="#">Page</a>
-				</li>
-				<li>
-					<a href="#">Page</a>
-				</li>
+		<!-- begin firstScreen -->
+		<section id="firstScreen" class="firstScreen">
+			<div class="container_center">
 				
-			</ul>
-			<!-- end breadcrumb -->
-			
-			<h3>Colmns</h3>
-			<div class="column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto nostrum a, quasi explicabo ratione obcaecati, corrupti omnis eligendi ipsa hic accusantium vitae quo consequatur consequuntur deserunt aliquid. Itaque blanditiis illo omnis id nesciunt nostrum ducimus voluptas debitis natus, possimus atque voluptates. Neque aut fuga quibusdam minima. Repellendus odit, molestias quod earum blanditiis labore delectus et temporibus aliquam distinctio expedita ut eum eligendi alias rerum adipisci illum. Qui, voluptatibus cum laboriosam placeat ullam ipsum veritatis tempora magnam, fuga sint doloribus, fugiat quos iusto sit iste error quia quidem. Cupiditate amet quia illum, consequuntur in sapiente, sunt sint commodi totam quaerat qui repudiandae dolorem quam ratione iure. Adipisci nostrum tempore, omnis nesciunt et labore voluptatibus expedita perspiciatis, fugit assumenda ullam. Ipsa voluptas rerum nihil repellendus temporibus, voluptatibus beatae officiis facilis earum, saepe itaque iure maiores! Aperiam laboriosam nobis mollitia alias sed libero ratione voluptatibus atque, incidunt enim corrupti delectus tempora illo consectetur aliquid tenetur porro sequi, nihil sint accusantium quidem?</div>
+				<div class="firstScreen__top">
+					<a href="/" class="logo"><img src="img/logo.png" alt=""></a>
+				</div>
 
-			<input type="text" name="" id="" placeholder="Name">
-			
-			<div class="row">
-				<label>Checkbox <input type="checkbox" name="" id=""></label>				
-			</div>
-			
-			<div class="row">			
-				<input type="radio" name="1" id="">
-				<input type="radio" name="1" id="">
-				<input type="radio" name="1" id="">
-			</div>
-			
-			<div class="row">
-				<button class="btn">Button</button>
-				<button class="btn btn__primary">Button</button>
-				<button class="btn btn__danger">Button</button>
-				<button class="btn btn__warning">Button</button>
-			</div>
+				<div class="firstScreen__left">
+					<h1 class="firstScreen__title">
+						<span>Запустите за 1 час</span>
+						собственную систему лояльности
+					</h1>
+					<div class="firstScreen__sub"><span>С помощью МАНИ</span> — мобильного приложения для малого и среднего бизнеса</div>
+					<ul class="firstScreen__list">
+						<li>Возвращает покупателей </li>
+						<li>Привлекает новых клиентов</li>
+						<li>Помогает продвигать ваши товары и услуги</li>
+					</ul>
+					<div class="firstScreen__action">
+						<div class="firstScreen__label">
+							<span>3 месяца </span>
+							БЕСПЛАТНЫЙ
+							<span>тест-драйв</span>
+						</div>
+						<button class="btn btn__success" data-toggle="modal" data-target="#modalCallback">Начать тест-драйв</button>
+					</div>
+				</div>
 
-			<div class="row">
-				<textarea placeholder="Text"></textarea>
-			</div>
-			
-			<h3>Grid</h3>
-			<!-- begin grid  -->
-			<div class="grid grid__3">
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde excepturi necessitatibus, rerum dicta quod distinctio.
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque!
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque!
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, doloribus!
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque!
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, doloribus!
+				<div class="firstScreen__right">
+					<div id="firstScreen__slider" class="firstScreen__slider">
+						<img class="firstScreen__slider_bg" src="img/slider-bg.png">
+						<carousel-3d :width="358" :height="808" :paginationEnabled="true" :scaling="50" :autoplay="true" :autoplayTimeout="3000" :perspective="0" :space="320" :controls-visible="true" :controls-prev-html="'&#10093;'" :controls-next-html="'&#10093;'" :display="3">
+						    <slide :index="0">
+						    	<img src="img/slide.png">
+								<div class="firstScreen__slider_bottom">
+									Приложение <br>нельзя потерять или забыть как обычную дисконтную карту
+								</div>
+						    </slide>
+						    <slide :index="1">
+						    	<img src="img/slide2.png">
+								<div class="firstScreen__slider_bottom">
+									Получайте мгновенную обратную связь от клиентов и улучшайте свой сервис
+								</div>
+						    </slide>
+						    <slide :index="2">
+						    	<img src="img/slide3.png">
+								<div class="firstScreen__slider_bottom">
+									Оповещайте об акциях через приложение и сокращайте затраты на обычную рекламу
+								</div>
+						    </slide>
+						</carousel-3d>
 					</div>
 				</div>
 			</div>
-			<!-- end grid  -->
+		</section>
+		<!-- end firstScreen -->
 
-			<h3>Grid match</h3>
-			<!-- begin grid  -->
-			<div class="grid grid__4" data-grid-match>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde excepturi necessitatibus, rerum dicta quod distinctio.
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque!
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque!
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, doloribus!
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque!
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, doloribus!
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde excepturi necessitatibus, rerum dicta quod distinctio.
-					</div>
-				</div>
-				<div class="grid__wrapper">
-					<div class="grid__item">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque!
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum voluptas quis quos debitis neque velit cumque beatae porro optio, ex placeat itaque, nesciunt, dolorum. Eligendi veniam, provident minima quam ad corrupti amet eius, atque! 
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</div>
-				</div>
-			</div>
-			<!-- end grid  -->
-
-			<!-- begin pagination -->
-			<ul class="pagination">
+		<!-- begin qr -->
+		<section id="qr" class="qr" data-animate-wrapp>
+			<div class="container_center">
 			
-				<li class="prev">
-					<a href="#"></a>
-				</li>
-				<li>
-					<a href="#">1</a>
-				</li>
-				<li>
-					<a href="#">2</a>
-				</li>
-				<li>
-					<a href="#">3</a>
-				</li>
-				<li class="next">
-					<a href="#"></a>
-				</li>
+				<div class="qr__left">
+					<h2 class="qr__name">
+						<span>МАНИ</span> — это тропинка возврата для ваших клиентов
+					</h2>
+					<div class="qr__sub">Вы получаете систему лояльности, которая обеспечивает повторный визит покупателя</div>
+					<div class="round__list">
+						<div class="round__listItem">
+							<div class="round__listImg">
+								<img src="img/qr1.png">
+							</div>
+							<div class="round__listText">Бонусные баллы поступают на аккаунт клиента через установленное вами время</div>
+						</div>
+						<div class="round__listItem">
+							<div class="round__listImg">
+								<img src="img/qr2.png">
+							</div>
+							<div class="round__listText">Процент скидки и условия ее использования вы устанавливаете самостоятельно</div>
+						</div>
+						<div class="round__listItem">
+							<div class="round__listImg">
+								<img src="img/qr3.png">
+							</div>
+							<div class="round__listText">Бонусы можно потратить только у вас, либо внутри вашей группы компаний</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="qr__right">
+					<img src="img/qr.png" alt="" class="qr__img" data-animate-x="0.1">
+					<img src="img/smoot.png" alt="" class="qr__smooth" data-animate-xy="5" data-smooth="3">
+				</div>
 				
-			</ul>
-			<!-- end pagination -->
+			</div>
+		</section>
+		<!-- end qr -->
+		
+		<!-- begin clients -->
+		<section id="clients" class="clients" data-animate-wrapp>
+			<div class="container_center">
 			
-			
+				<div class="clients__left">
+					<img src="img/smart-well.png" class="clients__well">
+					<div class="clients__phone">
+						<img src="img/client-phone.png" data-animate-x="0.1" data-smooth="15">
+					</div>
+					<img src="img/smoot.png" class="clients__smooth" data-animate-xy="4" data-smooth="7">
+					<img src="img/smoot-lg.png" class="clients__smooth clients__smooth_lg" data-animate-xy="-4"  data-smooth="10">
+				</div>
 
-		</div>
+				<div class="clients__right">
+					<h2 class="section__title">Клиенты не только возвращаются, но и приводят своих друзей</h2>
+					<div class="section__sub">МАНИ — это сарафанное радио нового поколения</div>
+					<div class="round__list">
+						<div class="round__listItem">
+							<div class="round__listImg">
+								<img src="img/client1.png">
+							</div>
+							<div class="round__listText">Каждый клиент получает <br>уникальный промокод.</div>
+						</div>
+						<div class="round__listItem">
+							<div class="round__listImg">
+								<img src="img/client2.png">
+							</div>
+							<div class="round__listText">Когда его знакомые используют промокод <br>и становятся вашими покупателями, владелец промокода получает бонусы.</div>
+						</div>
+						<div class="round__listItem">
+							<div class="round__listImg">
+								<img src="img/client3.png">
+							</div>
+							<div class="round__listText">Чем больше новых клиентов приходят по рекомендации, тем выгоднее «старым» ходить к вам и тем чаще они вас рекомендуют.</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end clients -->
+
+		<!-- begin saving -->
+		<section id="saving" class="saving">
+			<div class="container_center">
+
+				<h2 class="section__title">Очевидная экономия на рекламе</h2>
+				<div class="section__sub section__sub_info">Ваши покупатели узнают о горячих акциях <br>из собственного смартфона</div>
+			
+				<!-- begin Nav tabs saving__tab -->
+				<ul class="saving__tabs">
+					<li class="saving__tab active"><a href="#saving1" data-toggle="tab">Сообщайте о новинках</a></li>
+					<li class="saving__tab"><a href="#saving2" data-toggle="tab">Приглашайте на скидки</a></li>
+					<li class="saving__tab"><a href="#saving3" data-toggle="tab">Дарите бонусы</a></li>
+				</ul>
+				<!-- end Nav tabs saving__tab -->
+				
+				<!-- begin Tab panes saving__panes -->
+				<div class="saving__panes" data-animate-wrapp>
+					<div class="saving__pane saving__pane_new active" id="saving1">
+						<div class="saving__left">
+							<div class="grid grid__2 round__list">
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico1.png">
+									</div>
+									<div class="round__listText">Появилось новое блюдо в меню кафе или ресторана</div>
+								</div>
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico2.png">
+									</div>
+									<div class="round__listText">Поступление одежды или обуви для нового сезона рекомендуют</div>
+								</div>
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico3.png">
+									</div>
+									<div class="round__listText">Свежая коллекция плитки в строительном магазине</div>
+								</div>
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico4.png">
+									</div>
+									<div class="round__listText">Услуга, которой раньше не было в салоне красоты</div>
+								</div>
+							</div>
+							<a href="#" class="btn btn__success">
+								<img src="img/money.png">
+								<span><b>Больше не нужно тратиться</b> на листовки, рекламу на билбордах, в газетах и по местному радио</span>
+							</a>
+						</div>
+						<div class="saving__right">
+							<img src="img/save-smooth.png" class="saving__smoot" data-animate-xy="6" data-smooth="8">
+							<img src="img/save-smooth-sm.png" class="saving__smoot saving__smoot_sm" data-animate-xy="-3" data-smooth="10">
+							<img src="img/save-phone.png" class="saving__phone animateUp">
+						</div>
+					</div>
+					<div class="saving__pane saving__pane_sale" id="saving2">
+						<div class="saving__left">
+							<div class="grid grid__2 round__list">
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico5.png">
+									</div>
+									<div class="round__listText">Распродажи старых коллекций</div>
+								</div>
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico6.png">
+									</div>
+									<div class="round__listText">Акции к праздникам: Новый год, 23 февраля, 8 марта</div>
+								</div>
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico7.png">
+									</div>
+									<div class="round__listText">Скидки для постоянных покупателей</div>
+								</div>
+							</div>
+							<a href="#" class="btn btn__success">
+								<img src="img/money.png">
+								<span><b>Больше не нужно тратиться</b> на листовки, рекламу на билбордах, в газетах и по местному радио</span>
+							</a>
+						</div>
+						<div class="saving__right">
+							<img src="img/save-smooth-sale.png" class="saving__smoot" data-animate-xy="4" data-smooth="8">
+							<img src="img/save-smooth-sale-sm.png" class="saving__smoot saving__smoot_sm" data-animate-xy="-3" data-smooth="12">
+							<img src="img/save-phone-sale.png" class="saving__phone animateUp">
+						</div>
+					</div>
+					<div class="saving__pane saving__pane_gift" id="saving3">
+						<div class="saving__left">
+							<div class="grid round__list">
+								<div class="round__listItem">
+									<div class="round__listImg">
+										<img src="img/save-ico8.png">
+									</div>
+									<div class="round__listText">Отправляйте своим постоянным клиентам <br>бонусные баллы, которые нужно потратить <br>в ближайшие дни</div>
+								</div>
+							</div>
+							<a href="#" class="btn btn__success">
+								<img src="img/money.png">
+								<span><b>Больше не нужно тратиться</b> на листовки, рекламу на билбордах, в газетах и по местному радио</span>
+							</a>
+						</div>
+						<div class="saving__right">
+							<img src="img/save-smooth-gift.png" class="saving__smoot" data-animate-xy="4" data-smooth="8">
+							<img src="img/save-smooth-gift-sm.png" class="saving__smoot saving__smoot_sm" data-animate-xy="-3" data-smooth="12">
+							<img src="img/save-phone-gift.png" class="saving__phone animateUp">
+						</div>
+					</div>
+				</div>
+				<!-- end Tab panes saving__panes -->
+				
+			</div>
+		</section>
+		<!-- end saving -->
+
+		<!-- begin connect -->
+		<section id="connect" class="connect" data-animate-wrapp>
+			<div class="container_center">
+			
+				<div class="connect__left">
+					<img src="img/connect-phone.png" class="connect__phone" data-animate-x="0.03">
+				</div>
+				<div class="connect__right">
+					<h2 class="section__title animateUp">Вы подключаетесь к обмену клиентами</h2>
+					<div class="section__sub animateUp">Вы автоматически попадаете в поле зрения потенциальных клиентов </div>
+					<p class="animateUp">Кроме вашей компании, в приложении находятся и другие компании города из самых разных сфер бизнеса.  </p>
+					<p class="animateUp">Как только у пользователя возникнет потребность, он легко найдет вас, сможет сразу оценить предложение и свою выгоду.</p>
+					<p class="animateUp">Вся информация и скидки теперь будут в одном месте — это и выгодно, и удобно. </p>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end connect -->
+
+		<!-- begin service -->
+		<section id="service" class="service">
+			<div class="container_center">
+			
+				<h2 class="section__title">Уровень сервиса в вашем заведении будет постоянно расти</h2>
+				<div class="section__sub">Вы получаете инструмент для объективной оценки качества работы сотрудников</div>
+
+				<div class="service__content">
+					<!-- begin Nav tabs service__tabs -->
+					<ul class="service__tabs">
+						<li class="service__tab active">
+							<a href="#service1" data-toggle="tab">
+								<i class="icon-group"></i>
+								Контроль сотрудников
+							</a>
+						</li>
+						<li class="service__tab">
+							<a href="#service2" data-toggle="tab">
+								<i class="icon-rate"></i>
+								Рейтинг заведения
+							</a>
+						</li>
+						<li class="service__tab">
+							<a href="#service3" data-toggle="tab">
+								<i class="icon-talk"></i>
+								Общение с клиентами
+							</a>
+						</li>
+						<li class="service__tab">
+							<a href="#service4" data-toggle="tab">
+								<i class="icon-user"></i>
+								Персональный подход
+							</a>
+						</li>
+					</ul>
+					<!-- end Nav tabs service__tabs -->
+					
+					<!-- begin Tab panes service__panes -->
+					<div class="service__panes" data-animate-wrapp>
+						<div class="service__pane active" id="service1">
+							<div class="service__left">
+								<div class="round__list">
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service1.png">
+										</div>
+										<div class="round__listText">Сотрудники получают оценки от клиентов  — повышается ответственность и общая мотивация.</div>
+									</div>
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service2.png">
+										</div>
+										<div class="round__listText">Вы будете точно знать эффективность персонала: кто и сколько совершил продаж в день, неделю или месяц. </div>
+									</div>
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service3.png">
+										</div>
+										<div class="round__listText">Вы видите все операции сотрудников. Полностью исключен обман и хищения: покупатели знают ваш прайс и условия работы.</div>
+									</div>
+								</div>
+							</div>
+							<div class="service__right animateRight">
+								<img src="img/service-phone1.png" class="service__phone" data-animate-x="0.1">
+								<img src="img/smoot.png" class="service__smoot service__smoot_sm" data-animate-xy="-3" data-smooth="10">
+								<img src="img/smoot-lg.png" class="service__smoot" data-animate-xy="3" data-smooth="7">
+								<img src="img/ellips-light-sm.png" class="service__ellips" data-animate-xy="7" data-smooth="13">
+							</div>
+						</div>
+						<div class="service__pane" id="service2">
+							<div class="service__left">
+								<div class="round__list">
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service4.png">
+										</div>
+										<div class="round__listText">Пользователи видят, кто в вашем городе делает свою работу лучше всех.</div>
+									</div>
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service5.png">
+										</div>
+										<div class="round__listText">Вы получаете возможность привлекать даже постоянных клиентов своих прямых конкурентов. </div>
+									</div>
+								</div>
+							</div>
+							<div class="service__right animateRight">
+								<img src="img/service-phone2.png" class="service__phone" data-animate-x="0.1">
+								<img src="img/smoot.png" class="service__smoot service__smoot_sm" data-animate-xy="-3" data-smooth="10">
+								<img src="img/smoot-lg.png" class="service__smoot" data-animate-xy="3" data-smooth="7">
+								<img src="img/ellips-light-sm.png" class="service__ellips" data-animate-xy="7" data-smooth="13">
+							</div>
+						</div>
+						<div class="service__pane" id="service3">
+							<div class="service__left">
+								<div class="round__list">
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service6.png">
+										</div>
+										<div class="round__listText">Вы получаете мгновенную обратную связь, можете отвечать на вопросы и знаете, кто из сотрудников обслуживал конкретного клиента. </div>
+									</div>
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service7.png">
+										</div>
+										<div class="round__listText">Любые претензии и недоразумения будут решаться быстро и так, чтобы каждый гость был доволен.</div>
+									</div>
+								</div>
+							</div>
+							<div class="service__right animateRight">
+								<img src="img/service-phone3.png" class="service__phone" data-animate-x="0.1">
+								<img src="img/smoot.png" class="service__smoot service__smoot_sm" data-animate-xy="-3" data-smooth="10">
+								<img src="img/smoot-lg.png" class="service__smoot" data-animate-xy="3" data-smooth="7">
+								<img src="img/ellips-light-sm.png" class="service__ellips" data-animate-xy="7" data-smooth="13">
+							</div>
+						</div>
+						<div class="service__pane" id="service4">
+							<div class="service__left">
+								<div class="round__list">
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service8.png">
+										</div>
+										<div class="round__listText">Приложение хранит всю историю покупок.</div>
+									</div>
+									<div class="round__listItem animateUp">
+										<div class="round__listImg">
+											<img src="img/service9.png">
+										</div>
+										<div class="round__listText">Для самых лояльных клиентов вы сможете предлагать особые условия, например, давать VIP-статус.</div>
+									</div>
+								</div>
+							</div>
+							<div class="service__right animateRight">
+								<img src="img/service-phone4.png" class="service__phone" data-animate-x="0.1">
+								<img src="img/smoot.png" class="service__smoot service__smoot_sm" data-animate-xy="-3" data-smooth="10">
+								<img src="img/smoot-lg.png" class="service__smoot" data-animate-xy="3" data-smooth="7">
+								<img src="img/ellips-light-sm.png" class="service__ellips" data-animate-xy="7" data-smooth="13">
+							</div>
+						</div>
+					</div>
+					<!-- end Tab panes service__panes -->
+				</div>
+				
+			</div>
+		</section>
+		<!-- end service -->
+
+		<!-- begin crm -->
+		<section id="crm" class="crm" data-animate-wrapp>
+			<div class="container_center">
+			
+				<div class="crm__left">
+					<img src="img/crm-nout.png" data-animate-x="0.02">
+					<div class="tooltips" data-animate-x="0.01"><div class="tooltips__wrap">
+						<span>Так владелец бизнеса видит «кухню» своего заведения</span>
+					</div></div>
+				</div>
+				<div class="crm__right">
+					<h2 class="section__title">CRM-система, где все прозрачно и понятно</h2>
+					<div class="section__sub">МАНИ легко интегрируется в 1С, iiko, если вы ими пользуетесь. Если же нет, то CRM уже есть в программе</div>
+					<ul class="crm__list">
+						<li class="crm__listHead">Вы всегда знаете:</li>
+						<li class="crm__listItem">Какая сегодня выручка?</li>
+						<li class="crm__listItem">Сколько пришло новых клиентов?</li>
+						<li class="crm__listItem">Сколько пришло по рекомендации?</li>
+						<li class="crm__listItem">Какой клиент на какую сумму купил?</li>
+						<li class="crm__listItem">Сколько сотрудников воспользовались приложением?</li>
+						<li class="crm__listItem">Все ли в порядке, нет ли жалоб?</li>
+					</ul>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end crm -->
+
+		<!-- begin clock -->
+		<section id="clock" class="clock" data-animate-wrapp>
+			<div class="container_center">
+			
+				<div class="clock__left">
+					<h2 class="section__title">Все работает как часы, без вашего участия</h2>
+					<div class="section__sub">Вы получаете готовое комплексное решение с полной техподдержкой</div>
+					<div class="round__list">
+						<div class="round__listItem animateUp">
+							<div class="round__listImg">
+								<img src="img/clock1.png">
+							</div>
+							<div class="round__listText">Вам не придется тратить время на разработку, тестирование и доработку.</div>
+						</div>
+						<div class="round__listItem animateUp">
+							<div class="round__listImg">
+								<img src="img/clock2.png">
+							</div>
+							<div class="round__listText">Приложение МАНИ простое и удобное для пользователей, а еще продолжает развиваться: добавляются новые функции, мы прислушиваемся к предложениям и идеям пользователей.</div>
+						</div>
+						<div class="round__listItem animateUp">
+							<div class="round__listImg">
+								<img src="img/clock3.png">
+							</div>
+							<div class="round__listText"><b>Ваша бонусная система будет на уровене крупнейших сетевых магазинов.</b></div>
+						</div>
+					</div>
+				</div>
+				<div class="clock__right">
+					<img src="img/clock-nout.png" class="clock__nout" data-animate-x="0.02">
+					<img src="img/smoot.png" class="clock__smoot clock__smoot_sm" data-animate-xy="-3" data-smooth="10">
+					<img src="img/smoot-lg.png" class="clock__smoot" data-animate-xy="3" data-smooth="7">
+				</div>
+				
+			</div>
+		</section>
+		<!-- end clock -->
+
+		<!-- begin bonus -->
+		<section id="bonus" class="bonus">
+			<div class="container_center">
+			
+				<h2 class="section__title">Ваша бонусная система будет на уровене крупнейших сетевых магазинов</h2>
+				<div class="section__sub">Вы получаете готовое комплексное решение с полной техподдержкой</div>
+
+				<div class="bonus__content" data-animate-wrapp>
+					<div class="bonus__top">
+						<div class="tooltips"><div class="tooltips__wrap">
+							<i class="icon-percent"></i>
+							<span>Новости о новинках, <br>акциях, спецпредложениях</span>
+						</div></div>
+						
+						<div class="bonus__mobile">
+							<div class="tooltips">
+								<div class="tooltips__wrap">
+									<div class="bonus__item">Новости о новинках, акциях, спецпредложениях</div>
+									<div class="bonus__item">Адреса и схемы проезда</div>
+									<div class="bonus__item">Весь перечень ваших услуг и товаров</div>
+									<div class="bonus__item">Телефоны и время работы</div>
+									<div class="bonus__item">Отзывы других пользователейи товаров</div>
+									<div class="bonus__item">Актуальные прайсы и меню</div>
+									<div class="bonus__item">Рейтинги</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="bonus__left">
+						<div class="tooltips tooltips__right"><div class="tooltips__wrap">
+							<i class="icon-call"></i>
+							<span>Телефоны и время работы</span>
+						</div></div>
+						<div class="tooltips tooltips__right"><div class="tooltips__wrap">
+							<i class="icon-marker"></i>
+							<span>Адреса и схемы проезда</span>
+						</div></div>
+						<div class="tooltips tooltips__right"><div class="tooltips__wrap">
+							<i class="icon-wallet"></i>
+							<span>Актуальные прайсы и меню</span>
+						</div></div>
+					</div>
+					<div class="bonus__right">
+						<div class="tooltips tooltips__left"><div class="tooltips__wrap">
+							<i class="icon-list"></i>
+							<span>Весь перечень ваших <br>услуг и товаров</span>
+						</div></div>
+						<div class="tooltips tooltips__left"><div class="tooltips__wrap">
+							<i class="icon-review"></i>
+							<span>Отзывы других <br>пользователейи товаров</span>
+						</div></div>
+						<div class="tooltips tooltips__left"><div class="tooltips__wrap">
+							<i class="icon-star"></i>
+							<span>Рейтинги</span>
+						</div></div>
+					</div>
+					<div class="bonus__center">
+						<img src="img/bonus-cat.png" alt="" class="bonus__cat" data-animate-xy="5" data-smooth="6">
+						<img src="img/bonus-list.png" alt="" class="bonus__list" data-animate-xy="3" data-smooth="10">
+						<img src="img/bonus-cart.png" alt="" class="bonus__cart" data-animate-xy="-10" data-smooth="10">
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end bonus -->
+
+		<!-- begin calback -->
+		<section id="calback" class="calback">
+			<div class="container_center" data-animate-wrapp>
+			
+				<div class="calback__left">
+					<h2 class="section__title">Совершая всего <span>ОДНО</span> действие вы открываете <span>ДЕСЯТКИ</span> возможностей</h2>
+					<div class="section__sub"> Здравствуйте, меня зовут Вячеслав Рожнов, я автор идеи мобильного приложения МАНИ</div>
+					<p>Я и сам собственник нескольких бизнесов: 10 лет назад основал строительную компанию, 5 лет назад к ней добавился магазин электротехники. </p>
+					<p>Голова всегда болела об увелечении прибыли. Было очевидно, что много клиентов не возвращаются, потому что такой же товар есть у других продавцов. </p>
+					<p>Так родилась идея масштабной системы лояльности, куда входит аналитика, а также много инструментов для привлечения и получения «клиентов на всю жизнь».</p>
+				</div>
+				<div class="calback__right">
+					<div class="calback__photo animateUp">
+						<img src="img/review-photo.png">
+					</div>
+					<form action="" class="calback__form form" data-animate-x="0.1">
+						<div class="calback__legend">Оставьте телефон</div>
+						<p>наш менеджер перезвонит вам в течение 10 минут, чтобы проконсультировать, обсудить перспективы для вашего бизнеса и ответить на все вопросы</p>
+						<div class="calback__row">
+							<div>
+								<input required type="tel" name="tel" placeholder="+7 (___) ___-__-__">
+								<i class="icon-phone"></i>
+							</div>
+							<div>
+								<button class="btn btn__success">Обсудить свои задачи с менеджером</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end calback -->
+
+		<!-- begin test -->
+		<section id="test" class="test">
+			<div class="container_center">
+			
+				<h2 class="section__title">Честные условия</h2>
+
+				<div class="test__content">
+					<div class="test__box">
+						<img src="img/test-ico.png" alt="" class="test__icon">
+						<p>В течении 3 месяцев вы используете 100% функционала приложения, включая CRM-систему</p>
+						<b>Это тест-драйв и вы получаете его бесплатно</b>
+					</div>
+				</div>
+
+				<div class="test__bottom">
+					<p>Через 3 месяца вы можете продолжить работу, оплачивая ежемесячный взнос, или перейти на <b>бессрочное бесплатное использование</b> демо-версии приложения с ораниченным функционалом.</p>
+					<p><span class="succes__text">Вы ничего не теряете, а ваши клиенты не заметят разницы:</span> <br>вы по прежнему будете начислять бонусы, а клиенты — возвращаться, чтобы их потратить.</p>
+				</div>
+
+				<table class="test__table">
+					<thead>
+						<tr>
+							<th></th>
+							<th><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)
+							</th>
+							<th><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><b>Публикация информации о компании:</b> контакты, график работы, логотип, слоган и подробное описание. Вас будет легко и просто найти</td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/check-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Выбор категории бизнеса:</b> красота и здоровье, B2B, хобби и т.д. Пользователь сам выбирает фильтры, а значит, вашу компанию сразу видит самая заинтересованная аудитория</td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/check-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Заполнение информации о филиалах.</b> Филиалы могут находиться даже в разных городах и акции в них могут отличаться </td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/check-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Управление персоналом:</b> смотрите продажи и оценки качества работы по каждому сотруднику. Данные можно выгружать в Excel</td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/check-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Управление клиентами:</b> давайте промокоды для рекомендаций и оценивайте, сколько денег принес пользователь и какую скидку получил. Данные можно выгружать в Excel</td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/check-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Автоматический подсчет чека и скидки на основе прайс-листа и акций:</b> система знает все товары и услуги компании </td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/close-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Размещение прайс-листа</b> с категориями товаров и услуг</td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/close-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Публикация новостей</b> и акций через пуш-уведомления</td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/close-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Загрузка дополнительных фото</b> в галерею компании</td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/close-table.svg"></td>
+						</tr>
+						<tr>
+							<td><b>Интеграция с системами iiko, 1С </b></td>
+							<td><img src="img/check-table.svg"></td>
+							<td><img src="img/close-table.svg"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+		</section>
+		<!-- end test -->
+		
+		<!-- begin reviwe -->
+		<section id="reviwe" class="reviwe">
+			<div class="container_center">
+				
+				<h2 class="section__title">Отзывы от предпринимателей, которые внедрили <span>МАНИ</span> в свой бизнес</h2>
+				<div class="reviwe__content">
+					<!-- begin Nav tabs reviwe__tabs -->
+					<ul class="reviwe__tabs">
+						<li class="reviwe__tab active"><a href="#1" data-toggle="tab">Магазин строительных материалов</a></li>
+						<li class="reviwe__tab"><a href="#2" data-toggle="tab">Кафе-бар</a></li>
+						<li class="reviwe__tab"><a href="#3" data-toggle="tab">Парикмахерская</a></li>
+						<li class="reviwe__tab"><a href="#4" data-toggle="tab">Химчистка</a></li>
+					</ul>
+					<!-- end Nav tabs reviwe__tabs -->
+					
+					<!-- begin Tab panes reviwe__panes -->
+					<div class="reviwe__panes">
+						<div class="reviwe__pane active" id="1">
+							<!-- Для всавки видео в атрибут id нужно вставить id видео youtube Фоном подтягивается превьюшка -->
+							<div class="video__wrap youtube" id="xgVmZFSSuVY" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
+								<img src="img/video.jpg" class="video__prev">
+							</div>
+						</div>
+						<div class="reviwe__pane" id="2">
+							<div class="video__wrap youtube" id="aA6PhdBpGS0" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
+								<!-- <img src="img/video.jpg" class="video__prev"> -->
+							</div>
+						</div>
+						<div class="reviwe__pane" id="3">
+							<div class="video__wrap youtube" id="vMWnW2gRtZE" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
+								<!-- <img src="img/video.jpg" class="video__prev"> -->
+							</div>
+						</div>
+						<div class="reviwe__pane" id="4">
+							<div class="video__wrap youtube" id="gORg1QA3s_k" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
+								<!-- <img src="img/video.jpg" class="video__prev"> -->
+							</div>
+						</div>
+					</div>
+					<!-- end Tab panes reviwe__panes -->
+				</div>
+				
+			</div>
+		</section>
+		<!-- end reviwe -->
+
+		<!-- begin callus -->
+		<section id="callus" class="callus">
+			<div class="container_center">
+			
+				<h2 class="section__title animateUp">Позвоните нам</h2>
+				<div class="section__sub animateUp">чтобы лично обсудить возможности и перспективы для вашего бизнеса</div>
+
+				<div class="callus__sub animateUp">Звонок по России бесплатный</div>
+				<div class="callus__phone animateUp">
+					<a href="tel:+7 (800) 350-3709">+7 (800) 350-3709</a>
+				</div>
+				<div class="callus__action animateUp">
+					<button class="btn btn__success" data-toggle="modal" data-target="#modalLg">Заказать звонок</button>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end callus -->
 
 	</main>
 	<!-- end main__content -->
@@ -193,19 +777,150 @@
 <footer class="footer">
 
 	<div class="container_center">
-	
-		<div class="soc">
-			<a href="#"></a>
-			<a href="#"></a>
-			<a href="#"></a>
+		<div class="footer__left">
+			<i class="icon-mail"></i><a href="mailto:mail@mani.com">mail@mani.com</a>
+			<div class="soc soc_muted">
+				<div class="soc__title">Поделиться:</div>
+				<div class="soc__list">
+					<a href="https://vk.com/mani.bonus" class="soc__link" target="blank"><img src="img/vk.png" alt="В контакте"></a>
+					<a href="https://www.facebook.com/groups/2133444919999045/?source_id=1486587221475333" class="soc__link" target="blank"><img src="img/fb.png" alt="Facebook"></a>
+					<a href="#" class="soc__link" target="blank"><img src="img/odn.png" alt="Одноклассники"></a>
+					<a href="https://www.instagram.com/mani.bonus/" class="soc__link" target="blank"><img src="img/insta.png" alt="Instagram"></a>
+				</div>
+				<div class="footer__sub">Разработка сайта —  <a href="#">Время первых</a></div>
+			</div>
 		</div>
-		
-		<div class="copy"><a href="#">Site.com</a></div>
-
+		<div class="footer__right">
+			<div class="soc">
+				<div class="soc__title">Мы в соц сетях</div>
+				<div class="soc__list">
+					<a href="https://vk.com/mani.bonus" class="soc__link" target="blank"><img src="img/vk.png" alt="В контакте"></a>
+					<a href="https://www.facebook.com/groups/2133444919999045/?source_id=1486587221475333" class="soc__link" target="blank"><img src="img/fb.png" alt="Facebook"></a>
+					<a href="#" class="soc__link" target="blank"><img src="img/odn.png" alt="Одноклассники"></a>
+					<a href="https://www.instagram.com/mani.bonus/" class="soc__link" target="blank"><img src="img/insta.png" alt="Instagram"></a>
+				</div>
+			</div>
+			<div class="footer__sub">Разработка сайта —  <a href="#">Время первых</a></div>
+		</div>
+		<div class="footer__center">
+			<div class="footer__data">
+				<p>ИНН 12121321321</p>
+				<p>ОГРН 213212232111</p>
+			</div>
+			<!-- Trigger modal policy -->
+			<a href="#" data-toggle="modal" data-target="#policy">Политика конфиденциальности</a>
+			
+		</div>
 	</div>
 
 </footer>
 <!-- end footer -->
+
+<!-- begin Modal policy -->
+<div class="modal fade policy" id="policy">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="modal-body">
+				<div class="modal__title">Политика конфиденциальности</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolores at iure nihil eligendi esse beatae inventore consectetur quos dolore.</p>	
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate aspernatur, fugiat commodi, iure aliquam, dolorem sed accusamus distinctio, quis iusto. Id ex itaque repudiandae qui provident molestiae obcaecati cum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate iusto earum cum laborum incidunt officia molestiae dolorem eveniet tempore, quis enim tempora aliquam totam nostrum aut aperiam eum consectetur, natus?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptatum ducimus consequatur, sit. Ex a optio excepturi, deserunt nulla porro voluptatum, iure aut esse suscipit asperiores ratione veritatis laboriosam. Iure.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate enim maiores corporis quam eaque, nam perspiciatis illum dolores dolorum sunt laudantium! Consequatur, autem cupiditate amet, minus voluptates unde nostrum aspernatur.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal policy -->
+
+<!-- begin Modal modalCallback -->
+<div class="modal fade modalCallback" id="modalCallback">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="modal-body">
+				<div class="modal__title">Заполните форму</div>
+				<div class="modal__sub">чтобы получить инструкции по установке <br>и бесплатную консультацию</div>
+				<div class="modal__info">Наш менеджер перезвонит вам <br>в течение 10 минут</div>
+				<form action="" class="modal__form form">
+					<div class="form__row form__icon">
+						<input required type="text" class="form__field" placeholder="Ваше имя">
+						<i class="icon-user"></i>
+					</div>
+					<div class="form__row form__icon">
+						<input required type="text" class="form__field" placeholder="Введите ваш email">
+						<i class="icon-mail"></i>
+					</div>
+					<div class="form__row form__icon">
+						<input required type="tel" class="form__field" placeholder="+7 (___) ___-__-__">
+						<i class="icon-phone"></i>
+					</div>
+					<div class="form__row">
+						<button type="submit" class="btn btn__success">Получить доступ к бесплатному тест-драйву</button>
+					</div>
+					<div class="form__row txt__center">
+						<label for="ch1">
+							<input required type="checkbox" name="" id="ch1">
+							Я принимаю <a href="#" data-toggle="modal" data-target="#policy" data-dismiss="modal">Политику конфиденциальности</a>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal modalCallback -->
+
+<!-- begin Modal modalLg -->
+<div class="modal fade modalLg" id="modalLg">
+	<div class="modal-dialog">
+		<div class="modal-content" style="background-image: url(img/manager.jpg);">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="modal-body">
+				<div class="grid grid__2">
+					<div>
+						<div class="modal__title">Заполните форму</div>
+						<div class="modal__sub">Наш менеджер перезвонит вам <br>в течение 10 минут</div>
+						<form action="" class="modal__form form">
+							<div class="form__row form__icon">
+								<input required type="text" class="form__field" placeholder="Ваше имя">
+								<i class="icon-user"></i>
+							</div>
+							<div class="form__row form__icon">
+								<input required type="tel" class="form__field" placeholder="+7 (___) ___-__-__">
+								<i class="icon-phone"></i>
+							</div>
+							<div class="form__row">
+								<button type="submit" class="btn btn__success">Получить доступ к бесплатному тест-драйву</button>
+							</div>
+							<div class="form__row txt__center">
+								<label for="ch1">
+									<input required type="checkbox" name="" id="ch1">
+									Я принимаю <a href="#" data-toggle="modal" data-target="#policy" data-dismiss="modal">Политику конфиденциальности</a>
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal modalLg -->
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/vue-carousel-3d.min.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/tab.js"></script>
+	<script type="text/javascript" src="js/modal.js"></script>
+	<script type="text/javascript" src="js/jquery.inputmask.bundle.js"></script>
+	<script type="text/javascript" src="js/jquery.viewportchecker.min.js"></script>
+	<script type="text/javascript" src="js/function.js?0.3"></script>
 
 
 </body>
