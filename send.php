@@ -24,6 +24,7 @@ if ((isset($_POST['tel']) && $_POST['tel'] != "")) { //Проверка отпр
 	                        <title>' . $subject . '</title>
 	                    </head>
 	                    <body>
+	                        <p>Имя: ' . $_POST['name'] . '</p>
 	                        <p>Телефон: ' . $_POST['tel'] . '</p>                        
 	                    </body>
 	                </html>'; 
