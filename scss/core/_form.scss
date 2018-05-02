@@ -33,6 +33,10 @@ textarea {
 	@include placeholder {
 		color: $input_placeholder_color;
 	}
+	@media (max-width: 767px) {
+	    font-size: 13px;
+		padding: 1.6em 2em;
+	}
 }
 
 input[type=search]::-webkit-search-cancel-button,
@@ -173,5 +177,8 @@ input[type=checkbox]:disabled:indeterminate:before {
 				color: $btn_contrast_text_color;
 			}
 		}
-	}	
+	}
+	@media (max-width: 767px) {
+	    font-size: 14px;
+	}
 }

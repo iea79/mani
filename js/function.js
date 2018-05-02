@@ -34,6 +34,15 @@ $(document).ready(function() {
 		document.documentElement.setAttribute('data-browser', 'not-flex');
 	}
 
+	// First screen full height
+	function setHeiHeight() {
+	    $('.full__height').css({
+	        minHeight: $(window).height() + 'px'
+	    });
+	}
+	setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
+	$(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
+
 	// Reset link whte attribute href="#"
 	$('[href*="#"]').click(function(event) {
 		event.preventDefault();
@@ -42,11 +51,13 @@ $(document).ready(function() {
    	gridMatch();
    	fontResize();
    	slider3dInit();
-   	parallaxMove();
+   	if (!isXsWidth()) {
+   		parallaxMove();
+   	}
    	animateUp();
 
    	$('.saving__tab').on('click', function() {
-   		$('.animateUp').addClass('visible animated slideInUp');
+   		$('.animateUp').removeClass('animated');
    	});
 
    	$('.service__tab').on('click', function() {
@@ -92,7 +103,8 @@ $(document).ready(function() {
 	            data: form_data,
 	            success: function (response) {
 	            	$('#'+modalId).modal('hide');
-	            	$('#success').modal('show');
+	            	// $('#success').modal('show');
+	            	window.location.href="success.html";
 	            }
 	        });
         }
@@ -138,16 +150,16 @@ function gridMatch() {
 
 function fontResize() {
     var windowWidth = $(window).width();
-    if (windowWidth < 1770 && windowWidth >= 768) {
-    	var fontSize = windowWidth/17.69;
+    if (windowWidth < 1920 && windowWidth >= 768) {
+    	var fontSize = windowWidth/19.05;
     	var slideerWidth = windowWidth*0.2067;
     	var slideerHeight = windowWidth*0.4653;
     } else if (windowWidth < 768) {
     	var fontSize = 80;
     	var slideerWidth = windowWidth*0.3;
-    } else if (windowWidth >= 1770) {
-    	var fontSize = 100;
-    	var slideerWidth = 360;
+    // } else if (windowWidth >= 1770) {
+    // 	var fontSize = 100;
+    // 	var slideerWidth = 360;
     }
 	$('body').css('fontSize', fontSize + '%');
 }

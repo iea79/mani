@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link href="css/animate.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css?0.7" rel="stylesheet" type="text/css" />
+	<link href="css/style.css?1.1" rel="stylesheet" type="text/css" />
 
 
 </head>
@@ -246,7 +246,7 @@
 						<div class="saving__right">
 							<img src="img/save-smooth-sale.png" class="saving__smoot" data-animate-xy="4" data-smooth="8">
 							<img src="img/save-smooth-sale-sm.png" class="saving__smoot saving__smoot_sm" data-animate-xy="-3" data-smooth="12">
-							<img src="img/save-phone-sale.png" class="saving__phone animateUp">
+							<img src="img/save-phone-sale.png" class="saving__phone">
 						</div>
 					</div>
 					<div class="saving__pane saving__pane_gift" id="saving3">
@@ -267,7 +267,7 @@
 						<div class="saving__right">
 							<img src="img/save-smooth-gift.png" class="saving__smoot" data-animate-xy="4" data-smooth="8">
 							<img src="img/save-smooth-gift-sm.png" class="saving__smoot saving__smoot_sm" data-animate-xy="-3" data-smooth="12">
-							<img src="img/save-phone-gift.png" class="saving__phone animateUp">
+							<img src="img/save-phone-gift.png" class="saving__phone">
 						</div>
 					</div>
 				</div>
@@ -309,25 +309,25 @@
 						<li class="service__tab active">
 							<a href="#service1" data-toggle="tab">
 								<i class="icon-group"></i>
-								Контроль сотрудников
+								<span>Контроль сотрудников</span>
 							</a>
 						</li>
 						<li class="service__tab">
 							<a href="#service2" data-toggle="tab">
 								<i class="icon-rate"></i>
-								Рейтинг заведения
+								<span>Рейтинг заведения</span>
 							</a>
 						</li>
 						<li class="service__tab">
 							<a href="#service3" data-toggle="tab">
 								<i class="icon-talk"></i>
-								Общение с клиентами
+								<span>Общение с клиентами</span>
 							</a>
 						</li>
 						<li class="service__tab">
 							<a href="#service4" data-toggle="tab">
 								<i class="icon-user"></i>
-								Персональный подход
+								<span>Персональный подход</span>
 							</a>
 						</li>
 					</ul>
@@ -581,7 +581,7 @@
 
 		<!-- begin calback -->
 		<section id="calback" class="calback">
-			<div class="container_center" data-animate-wrapp>
+			<div class="container_center">
 			
 				<div class="calback__left">
 					<h2 class="section__title">Совершая всего <span>ОДНО</span> действие вы открываете <span>ДЕСЯТКИ</span> возможностей</h2>
@@ -591,10 +591,10 @@
 					<p>Так родилась идея масштабной системы лояльности, куда входит аналитика, а также много инструментов для привлечения и получения «клиентов на всю жизнь».</p>
 				</div>
 				<div class="calback__right">
-					<div class="calback__photo animateUp">
-						<img src="img/review-photo.png">
+					<div class="calback__photo">
+						<img class="animateUp" src="img/review-photo.png">
 					</div>
-					<form action="send.php" class="calback__form form" data-animate-x="0.1">
+					<form action="send.php" class="calback__form form">
 						<div class="calback__legend">Оставьте телефон</div>
 						<p>наш менеджер перезвонит вам в течение 10 минут, чтобы проконсультировать, обсудить перспективы для вашего бизнеса и ответить на все вопросы</p>
 						<div class="calback__row">
@@ -632,6 +632,8 @@
 					<p><span class="succes__text">Вы ничего не теряете, а ваши клиенты не заметят разницы:</span> <br>вы по прежнему будете начислять бонусы, а клиенты — возвращаться, чтобы их потратить.</p>
 				</div>
 
+				<h2 class="section__title is_mobile">Сравнение функционала полной и демо версии</h2>
+
 				<table class="test__table">
 					<thead>
 						<tr>
@@ -647,53 +649,73 @@
 					<tbody>
 						<tr>
 							<td><b>Публикация информации о компании:</b> контакты, график работы, логотип, слоган и подробное описание. Вас будет легко и просто найти</td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/check-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Выбор категории бизнеса:</b> красота и здоровье, B2B, хобби и т.д. Пользователь сам выбирает фильтры, а значит, вашу компанию сразу видит самая заинтересованная аудитория</td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/check-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Заполнение информации о филиалах.</b> Филиалы могут находиться даже в разных городах и акции в них могут отличаться </td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/check-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Управление персоналом:</b> смотрите продажи и оценки качества работы по каждому сотруднику. Данные можно выгружать в Excel</td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/check-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Управление клиентами:</b> давайте промокоды для рекомендаций и оценивайте, сколько денег принес пользователь и какую скидку получил. Данные можно выгружать в Excel</td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/check-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Автоматический подсчет чека и скидки на основе прайс-листа и акций:</b> система знает все товары и услуги компании </td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/close-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/close-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Размещение прайс-листа</b> с категориями товаров и услуг</td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/close-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/close-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Публикация новостей</b> и акций через пуш-уведомления</td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/close-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/close-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Загрузка дополнительных фото</b> в галерею компании</td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/close-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/close-table.svg"></td>
 						</tr>
 						<tr>
 							<td><b>Интеграция с системами iiko, 1С </b></td>
-							<td><img src="img/check-table.svg"></td>
-							<td><img src="img/close-table.svg"></td>
+							<td><div class="mobile__head"><b>Полная версия</b> 
+							(первые 3 месяца бесплатно)</div><img src="img/check-table.svg"></td>
+							<td><div class="mobile__head"><b>Демо-версия</b>
+							(доступ бессрочно и бесплатно)</div><img src="img/close-table.svg"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -703,49 +725,40 @@
 		<!-- end test -->
 		
 		<!-- begin reviwe -->
-		<section id="reviwe" class="reviwe">
+		<!-- <section id="reviwe" class="reviwe">
 			<div class="container_center">
 				
 				<h2 class="section__title">Отзывы от предпринимателей, которые внедрили <span>МАНИ</span> в свой бизнес</h2>
 				<div class="reviwe__content">
-					<!-- begin Nav tabs reviwe__tabs -->
 					<ul class="reviwe__tabs">
 						<li class="reviwe__tab active"><a href="#1" data-toggle="tab">Магазин строительных материалов</a></li>
 						<li class="reviwe__tab"><a href="#2" data-toggle="tab">Кафе-бар</a></li>
 						<li class="reviwe__tab"><a href="#3" data-toggle="tab">Парикмахерская</a></li>
 						<li class="reviwe__tab"><a href="#4" data-toggle="tab">Химчистка</a></li>
 					</ul>
-					<!-- end Nav tabs reviwe__tabs -->
-					
-					<!-- begin Tab panes reviwe__panes -->
 					<div class="reviwe__panes">
 						<div class="reviwe__pane active" id="1">
-							<!-- Для всавки видео в атрибут id нужно вставить id видео youtube Фоном подтягивается превьюшка -->
 							<div class="video__wrap youtube" id="xgVmZFSSuVY" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
 								<img src="img/video.jpg" class="video__prev">
 							</div>
 						</div>
 						<div class="reviwe__pane" id="2">
 							<div class="video__wrap youtube" id="aA6PhdBpGS0" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
-								<!-- <img src="img/video.jpg" class="video__prev"> -->
 							</div>
 						</div>
 						<div class="reviwe__pane" id="3">
 							<div class="video__wrap youtube" id="vMWnW2gRtZE" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
-								<!-- <img src="img/video.jpg" class="video__prev"> -->
 							</div>
 						</div>
 						<div class="reviwe__pane" id="4">
 							<div class="video__wrap youtube" id="gORg1QA3s_k" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd480">
-								<!-- <img src="img/video.jpg" class="video__prev"> -->
 							</div>
 						</div>
 					</div>
-					<!-- end Tab panes reviwe__panes -->
 				</div>
 				
 			</div>
-		</section>
+		</section> -->
 		<!-- end reviwe -->
 
 		<!-- begin callus -->
@@ -757,7 +770,7 @@
 
 				<div class="callus__sub animateUp">Звонок по России бесплатный</div>
 				<div class="callus__phone animateUp">
-					<a href="tel:+7 (800) 350-3709">+7 (800) 350-3709</a>
+					<a href="tel:8 (800) 350-3709">8 (800) 350-3709</a>
 				</div>
 				<div class="callus__action animateUp">
 					<button class="btn btn__success" data-toggle="modal" data-target="#modalLg">Заказать звонок</button>
@@ -779,7 +792,7 @@
 	<div class="container_center">
 		<div class="footer__left">
 			<i class="icon-mail"></i><a href="mailto:mail@mani.com">mail@mani.com</a>
-			<div class="soc soc_muted">
+			<!-- <div class="soc soc_muted">
 				<div class="soc__title">Поделиться:</div>
 				<div class="soc__list">
 					<a href="https://vk.com/mani.bonus" class="soc__link" target="blank"><img src="img/vk.png" alt="В контакте"></a>
@@ -788,7 +801,7 @@
 					<a href="https://www.instagram.com/mani.bonus/" class="soc__link" target="blank"><img src="img/insta.png" alt="Instagram"></a>
 				</div>
 				<div class="footer__sub">Разработка сайта —  <a href="#">Время первых</a></div>
-			</div>
+			</div> -->
 		</div>
 		<div class="footer__right">
 			<div class="soc">
@@ -800,7 +813,7 @@
 					<a href="https://www.instagram.com/mani.bonus/" class="soc__link" target="blank"><img src="img/insta.png" alt="Instagram"></a>
 				</div>
 			</div>
-			<div class="footer__sub">Разработка сайта —  <a href="#">Время первых</a></div>
+			<div class="footer__sub">Разработка сайта —  <a href="http://timetofirst.ru" target="blank">Время Первых</a></div>
 		</div>
 		<div class="footer__center">
 			<div class="footer__data">
@@ -861,7 +874,7 @@
 					</div>
 					<div class="form__row txt__center">
 						<label for="ch1">
-							<input required type="checkbox" name="" id="ch1">
+							<input required type="checkbox" checked name="" id="ch1">
 							Я принимаю <a href="#" data-toggle="modal" data-target="#policy" data-dismiss="modal">Политику конфиденциальности</a>
 						</label>
 					</div>
@@ -896,7 +909,7 @@
 							</div>
 							<div class="form__row txt__center">
 								<label for="ch1">
-									<input required type="checkbox" name="" id="ch1">
+									<input required type="checkbox" checked name="" id="ch1">
 									Я принимаю <a href="#" data-toggle="modal" data-target="#policy" data-dismiss="modal">Политику конфиденциальности</a>
 								</label>
 							</div>
